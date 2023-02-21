@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "ESNext",
+    "target": "es6",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["scr/*"]
+    }
+  },
+  "lib": ["ESNext", "dom", "dom.iterable", "scripthost"]
+}

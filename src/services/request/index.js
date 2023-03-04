@@ -2,7 +2,6 @@ import axios from "axios";
 import { BASE_URL, TIMEOUT } from "./config";
 import useMainStore from "@/stores/modules/main";
 
-console.log(2);
 const mainStore = useMainStore();
 
 class JMRequest {
@@ -34,17 +33,14 @@ class JMRequest {
   }
 
   request(config) {
-    // mainStore.isLoading = true
     return new Promise((resolve, reject) => {
       this.instance
         .request(config)
         .then((res) => {
           resolve(res.data);
-          // mainStore.isLoading = false
         })
         .catch((err) => {
           reject(err);
-          // mainStore.isLoading = false
         });
     });
   }

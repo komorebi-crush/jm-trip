@@ -31,7 +31,12 @@ const { houselist } = storeToRefs(homeStore);
 const router = useRouter();
 const itemClick = (item) => {
   // 跳转到Detail页面
-  router.push("/detail/" + item.houseId);
+  router.push({
+    name: "detail",
+    params: {
+      id: item.houseId,
+    },
+  });
 };
 </script>
 

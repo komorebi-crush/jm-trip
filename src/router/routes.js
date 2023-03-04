@@ -28,4 +28,14 @@ export default [
     name: "city",
     component: () => import("@/views/city/city.vue"),
   },
+  {
+    path: "/search",
+    name: "search",
+    component: () => import("@/views/search/search.vue"),
+  },
+  {
+    path: "/detail/:id",
+    name: "detail",
+    component: () => import("@/views/detail/detail.vue"),
+  },
 ];
